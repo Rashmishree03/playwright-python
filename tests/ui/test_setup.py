@@ -10,6 +10,7 @@ def test_login(page, config):
     )
     page.wait_for_timeout(5000)
     assert login_page.is_dashboard_displayed()
+    assert page.title() == "OrangeHR"
 
 def test_google_search(page):
     login_page = LoginPage(page)
